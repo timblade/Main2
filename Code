@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int is_Divisible(long int num) {
+   long int temp = num;
+   int sum = 0;
+   while (num) {
+      int k = num % 10;
+      sum = sum + k;
+      num = num / 10;
+   }
+   if (temp % sum == 0)
+      return 1;
+      return 0;
+}
+int main() {
+   long int num = 75;
+   if(is_Divisible(num))
+      printf("yes\n");
+   else
+      printf("no\n");
+      return 0;
+}
